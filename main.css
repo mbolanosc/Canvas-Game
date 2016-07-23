@@ -7,3 +7,21 @@ canvas {
 	display: block;
 	margin: 0 auto;
 }
+.txt-align{
+	text-align: center;
+}
+.jumbotron{
+	margin-top: 10em;
+}
+.btn-default{
+	margin-left: 38em;
+	background-color: #91CED7;
+	border: none;
+}
+.btn-default:hover{
+	background-color: #82B9AD;
+}
+.btn-default:active{
+	background-color: #91CED7;
+}
+
