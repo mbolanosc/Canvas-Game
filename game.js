@@ -1,6 +1,10 @@
+
 (function(){
 	var canvas = document.getElementById('gameCanvas');
 	var ctx = canvas.getContext('2d');
+	//$("#panelGame").hide();
+
+
 
 	// Primer ejemeplo de dibujos en el Canvas
 
@@ -109,6 +113,8 @@
 	}
 
 	function collisionDetection(){
+		
+
 		for(var c = 0; c < brickColumnCount; c++){
 			for (var r = 0; r < brickRowCount; r++){
 				var brick = bricks[c][r]; // extraer el cuadrito
@@ -121,7 +127,8 @@
 						score ++;
 						if (score == brickRowCount * brickColumnCount) {
 							alert('Congrats!, you win yey!!');
-							document.location.reload();
+							//document.location.reload();
+							window.location=('index.html');
 						};
 					};
 				};
@@ -172,10 +179,12 @@
 			}else{
 				alert('game over ):');
 				document.location.reload();
+				$("#gameCanvas").hide();
+				$("#panelGame").show();
 			};
 			
 		};
-
+		
 		if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
 			dx = -dx;	
 		}
